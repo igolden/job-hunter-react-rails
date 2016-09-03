@@ -3,7 +3,7 @@
 
 Install assets and setup database dummy data.
 
-`bundle install && bundle exec rake db:setup`
+`bundle install && bundle exec && bundle exec rake db:setup`
 
 Start your server
 
