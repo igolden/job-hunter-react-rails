@@ -1,24 +1,17 @@
-# README
+# Rails README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Install assets and setup database dummy data.
 
-* Ruby version
+`bundle install && bundle exec rake db:setup`
 
-* System dependencies
+Start your server
 
-* Configuration
+`puma`
 
-* Database creation
+Visit localhost:3000/
 
-* Database initialization
 
-* How to run the test suite
+Use ngrok to port your api to a live url:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`ngrok http 3000`
