@@ -4,14 +4,9 @@ import thunk from 'redux-thunk'
 import makeRootReducer from './reducers'
 
 export default (initialState = {}, history) => {
-  // ======================================================
-  // Middleware Configuration
-  // ======================================================
+
   const middleware = [thunk, routerMiddleware(history)]
 
-  // ======================================================
-  // Store Enhancers
-  // ======================================================
   const enhancers = []
   if (__DEBUG__) {
     const devToolsExtension = window.devToolsExtension
@@ -20,9 +15,6 @@ export default (initialState = {}, history) => {
     }
   }
 
-  // ======================================================
-  // Store Instantiation and HMR Setup
-  // ======================================================
   const store = createStore(
     makeRootReducer(),
     initialState,
@@ -31,6 +23,7 @@ export default (initialState = {}, history) => {
       ...enhancers
     )
   )
+
   store.asyncReducers = {}
 
   if (module.hot) {

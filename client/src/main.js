@@ -26,18 +26,14 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: (state) => state.router
 })
 
-// ========================================================
-// Developer Tools Setup
-// ========================================================
+// dev tools
 if (__DEBUG__) {
   if (window.devToolsExtension) {
     window.devToolsExtension.open()
   }
 }
 
-// ========================================================
-// Render Setup
-// ========================================================
+
 const MOUNT_NODE = document.getElementById('root')
 
 let render = () => {
@@ -53,10 +49,8 @@ let render = () => {
   )
 }
 
-// This code is excluded from production bundle
 if (__DEV__) {
   if (module.hot) {
-    // Development render functions
     const renderApp = render
     const renderError = (error) => {
       const RedBox = require('redbox-react').default
@@ -64,7 +58,6 @@ if (__DEV__) {
       ReactDOM.render(<RedBox error={error} />, MOUNT_NODE)
     }
 
-    // Wrap render in try/catch
     render = () => {
       try {
         renderApp()
@@ -82,8 +75,4 @@ if (__DEV__) {
     })
   }
 }
-
-// ========================================================
-// Go!
-// ========================================================
 render()
