@@ -13,3 +13,5 @@ export type JobsStateObject = {
   saved: Array<number>,
   jobs: Array<JobObject>
 }
+
+//unsure about JobsStateObject... what is its application?

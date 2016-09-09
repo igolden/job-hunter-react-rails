@@ -1,24 +1,29 @@
 import React from 'react'  
 import type { JobObject  } from '../interfaces/jobs'
-
+import classes from './Jobs.scss'
 type Props = {  
   job: ?JobObject,
-  saved: Array<JobsObject>,
-  fetchJob: Function,
-  saveCurrentJob: Function
+  jobsArray: Array <JobObject>
 }
 
 export const Jobs = (props: Props) => (  
-                                      <div>
-                                      <p>Here is where it all goes!</p>
+                                     <div> 
+                                      <h1>Jobs:</h1>
+                                       <div className={classes.jobContainer}>
+                                      <div className={classes.job}>
+                                       <h3>Web-Developer</h3>
+                                        <p>Description: A great starting job</p>
+                                        <p>Location: Portland, OR</p>
+                                        <p>Salary: 80,000</p>
+                                        <p><a href="https://www.google.com">Apply Here</a></p>
+                                       </div>
+                                      </div>
                                       </div>
                                      )
 
                                      Jobs.propTypes = {  
                                        job: React.PropTypes.object,
-                                       saved: React.PropTypes.array.isRequired,
-                                       fetchJob: React.PropTypes.func.isRequired,
-                                       saveCurrentJob: React.PropTypes.func.isRequired
+                                       jobsArray: React.PropTypes.object,
                                      }
 
                                      export default Jobs 

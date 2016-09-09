@@ -53,6 +53,7 @@ export function saveCurrentJob (): Action {
 //}
 
 // Action Handlers
+// here we create an object which contains all of our associated actions
 // ------------------------------------
 export const actions = {  
   requestJob,
