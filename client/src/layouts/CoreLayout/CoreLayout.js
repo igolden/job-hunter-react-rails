@@ -17,3 +17,5 @@ CoreLayout.propTypes = {
 }
 
 export default CoreLayout
+
+//is {{ children }} something in the "store"?

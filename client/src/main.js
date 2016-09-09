@@ -38,6 +38,8 @@ if (__DEBUG__) {
 // ========================================================
 // Render Setup
 // ========================================================
+
+//be aware of how variables can stand for common react statements such as below!
 const MOUNT_NODE = document.getElementById('root')
 
 let render = () => {
@@ -52,7 +54,7 @@ let render = () => {
     MOUNT_NODE
   )
 }
-
+//our routes are mounted to our AppContainer
 // This code is excluded from production bundle
 if (__DEV__) {
   if (module.hot) {

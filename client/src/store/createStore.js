@@ -32,7 +32,7 @@ export default (initialState = {}, history) => {
     )
   )
   store.asyncReducers = {}
-
+//we can pass in reducers here to asynchronously update our store
   if (module.hot) {
     module.hot.accept('./reducers', () => {
       const reducers = require('./reducers').default

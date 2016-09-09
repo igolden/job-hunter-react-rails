@@ -40,6 +40,8 @@ export const actions = {
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
+
+//create an array of all actions... which will be translated to the action types.
 const ACTION_HANDLERS = {
   [COUNTER_INCREMENT]: (state, action) => state + action.payload
 }
